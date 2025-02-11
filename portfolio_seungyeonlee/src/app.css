@@ -13,6 +13,94 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  perspective: 1000px;
+}
+
+/* Remove background color from the navbar */
+.navbar {
+  width: 50%;
+  min-width: 320px;
+  max-width: 700px;
+  background: transparent; /* Make background transparent */
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* Optional: Keeps blur effect behind navbar */
+}
+
+/* Hover effect for navbar items */
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+  background-color: rgba(169, 169, 169, 0.4); /* Light gray background on hover */
+  color: #333; /* Darker color for text on hover */
+}
+
+/* Keep text color normal for links */
+.nav-links a {
+  color: inherit; /* Inherit the color from parent element */
+}
+
+/* Optional: Change text color on hover */
+.nav-links a:hover {
+  color: #222; /* Darken text color on hover */
+}
+
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  font-size: 22px;
+  width: 40px; /* Set width for circle */
+  height: 40px; /* Set height to match width for perfect circle */
+  border-radius: 50%; /* Ensures it stays a circle */
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out, opacity 0.2s ease, background-color 0.3s ease;
+  outline: none; /* Remove the outline when clicked */
+}
+
+.dark-mode-btn:hover {
+  background-color: rgba(169, 169, 169, 0.4); /* Light gray on hover */
+}
+
+.dark-mode-btn:active {
+  transform: rotateY(180deg); /* Flips the button on click */
+  outline: none;
+  border: none;
+}
+
+.dark-mode-btn.active {
+  transform: rotateY(180eg); /* Applied when dark mode is on */
+}
+
+.dark-mode-btn.inactive {
+  transform: rotateY(180deg); /* Initial state (inactive, no rotation) */
+}
+
+.dark-mode-btn:focus {
+  outline: none;
+}
+
+/* Light mode and dark mode styles for the button */
+.dark-mode-btn {
+  color: #333; /* Default color */
+}
+
+.dark-mode-btn.active {
+  color: #fff; /* Color when dark mode is enabled */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
