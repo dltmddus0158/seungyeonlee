@@ -95,7 +95,7 @@
   transform: rotateY(180deg); /* Flips the button in 3D space */
 }
 .dark-mode-btn:inactive {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 </style>
 
