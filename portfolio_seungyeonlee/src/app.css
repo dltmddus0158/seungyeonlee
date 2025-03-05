@@ -1,168 +1,90 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  perspective: 1000px;
-}
-
-/* Remove background color from the navbar */
-.navbar {
-  width: 50%;
-  min-width: 320px;
-  max-width: 700px;
-  background: transparent; /* Make background transparent */
-  padding: 4px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 12px;
-  backdrop-filter: blur(8px); /* Optional: Keeps blur effect behind navbar */
-}
-
-/* Hover effect for navbar items */
-.nav-links a {
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-.nav-links a:hover {
-  background-color: rgba(169, 169, 169, 0.4); /* Light gray background on hover */
-  color: #333; /* Darker color for text on hover */
-}
-
-/* Keep text color normal for links */
-.nav-links a {
-  color: inherit; /* Inherit the color from parent element */
-}
-
-/* Optional: Change text color on hover */
-.nav-links a:hover {
-  color: #222; /* Darken text color on hover */
-}
-
-
-/* Dark Mode Button */
-.dark-mode-btn {
-  font-size: 22px;
-  width: 40px; /* Set width for circle */
-  height: 40px; /* Set height to match width for perfect circle */
-  border-radius: 50%; /* Ensures it stays a circle */
-  background-color: transparent; /* Transparent background */
-  border: none; /* No border */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.7s ease-in-out, opacity 0.2s ease, background-color 0.3s ease;
-  outline: none; /* Remove the outline when clicked */
-}
-
-.dark-mode-btn:hover {
-  background-color: none;
-}
-
-.dark-mode-btn:active {
-  transform: rotateY(180deg); /* Flips the button on click */
-  outline: none;
-  border: none;
-}
-
-.dark-mode-btn.active {
-  transform: rotateY(180eg); /* Applied when dark mode is on */
-}
-
-.dark-mode-btn.inactive {
-  transform: rotateY(180deg); /* Initial state (inactive, no rotation) */
-}
-
-.dark-mode-btn:focus {
-  outline: none;
-}
-
-/* Light mode and dark mode styles for the button */
-.dark-mode-btn {
-  color: #333; /* Default color */
-}
-
-.dark-mode-btn.active {
-  color: #fff; /* Color when dark mode is enabled */
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* 기본 설정 */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  width: 100%; /* 화면 넓이 전체를 차지 */
+  display: flex;
+  justify-content: space-between; /* 로고와 네비게이션 항목 사이에 공간을 분배 */
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto; /* 로고와 네비게이션 항목 사이에 공간을 만들어줌 */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* 항목 사이에 더 많은 여백 추가 */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #646cff;
+}
+
+/* 메인 콘텐츠 */
+main {
+  width: 100%; /* 화면 전체 넓이 차지 */
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 각 섹션 카드 스타일 */
+section {
+  width: 80%; /* 화면의 80% 너비로 제한 */
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* 카드 모서리를 둥글게 */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left; /* 타이틀을 왼쪽 정렬 */
+  margin-bottom: 15px;
 }
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* 여백을 위한 임시 내용 공간 */
+section::after {
+  content: "";
+  display: block;
+  height: 200px; /* 섹션 내용이 없을 때 자리 차지 */
+  background-color: #e0e0e0;
 }
