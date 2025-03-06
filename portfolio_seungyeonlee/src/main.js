@@ -1,7 +1,6 @@
 import App from './App.svelte';
+import './app.css'; // CSS 직접 로드
 
-const app = new App({
-  target: document.getElementById('svelte-work'),
+new App({
+  target: document.getElementById('app')
 });
-
-export default app;

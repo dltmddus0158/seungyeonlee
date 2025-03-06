@@ -17,36 +17,35 @@ body {
 
 /* 네비게이션 바 */
 .navbar {
-  width: 100%; /* 화면 넓이 전체를 차지 */
+  width: 100%;
+  max-width: 1200px;
   display: flex;
-  justify-content: space-between; /* 로고와 네비게이션 항목 사이에 공간을 분배 */
+  justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto; /* 로고와 네비게이션 항목 사이에 공간을 만들어줌 */
-}
-
+/* 리스트 스타일 제거 후 가로 정렬 */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px; /* 항목 사이에 더 많은 여백 추가 */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
-  display: inline;
+  display: inline-block;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
@@ -54,37 +53,14 @@ body {
   color: #646cff;
 }
 
-/* 메인 콘텐츠 */
-main {
-  width: 100%; /* 화면 전체 넓이 차지 */
-  padding: 40px 20px;
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 각 섹션 카드 스타일 */
-section {
-  width: 80%; /* 화면의 80% 너비로 제한 */
+/* 카드 섹션 */
+.card {
+  width: 100%;
+  max-width: 800px;
   margin: 20px 0;
   padding: 20px;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px; /* 카드 모서리를 둥글게 */
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: left; /* 타이틀을 왼쪽 정렬 */
-  margin-bottom: 15px;
-}
-
-/* 여백을 위한 임시 내용 공간 */
-section::after {
-  content: "";
-  display: block;
-  height: 200px; /* 섹션 내용이 없을 때 자리 차지 */
-  background-color: #e0e0e0;
+  border-radius: 10px;
+  
 }
