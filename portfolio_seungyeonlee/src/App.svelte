@@ -12,7 +12,7 @@
     <li><a href="#about" on:click|preventDefault={() => scrollToSection('about')}>About</a></li>
     <li><a href="#work" on:click|preventDefault={() => scrollToSection('work')}>Work</a></li>
     <li><a href="#writings" on:click|preventDefault={() => scrollToSection('writings')}>Writings</a></li>
-    <li><a href="/public/resume.pdf" target="_blank">Resume</a></li>
+    <li><a href="/resume.pdf" target="_blank">Resume</a></li>
   </ul>
 </nav>
 
