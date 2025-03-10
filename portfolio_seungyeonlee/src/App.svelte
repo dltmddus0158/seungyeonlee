@@ -1,9 +1,13 @@
 <script>
+  import { goto } from './router.js'; // 라우팅 기능을 위한 별도 파일
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  }
+  function navigateTo(page) {
+    goto(page);
   }
 </script>
 
@@ -32,18 +36,19 @@
     <h3>WORK</h3>
     <p>Archives of my UX work</p>
     <p>&nbsp;</p>
-    <img src="/images/ex_img.jpg" width="300" alt="Work">
-    <img src="/images/ex_img.jpg" width="300" alt="Work">
-    <img src="/images/ex_img.jpg" width="300" alt="Work">
+
+    <button class="image-button" on:click={() => navigateTo('work-detail')}>
+      <img src="/images/ex_img.jpg" width="300" alt="Work">
+    </button>
   </section>
 
   <section id="writings" class="card">
     <h3>WRITINGS</h3>
     <p>Archives of my blog posts</p>
     <p>&nbsp;</p>
-    <img src="/images/ex_img.jpg" width="300" alt="Writings">
-    <img src="/images/ex_img.jpg" width="300" alt="Writings">
-    <img src="/images/ex_img.jpg" width="300" alt="Writings">
+    <button class="image-button" on:click={() => navigateTo('writings-detail')}>
+      <img src="/images/ex_img.jpg" width="300" alt="Writing">
+    </button>
   </section>
 </main>
 

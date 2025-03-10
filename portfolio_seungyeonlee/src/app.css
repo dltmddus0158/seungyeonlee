@@ -75,3 +75,21 @@ p {
   margin: 10px;
   padding: 10px;
 }
+
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.image-button:hover img {
+  transform: scale(1.05);
+}
