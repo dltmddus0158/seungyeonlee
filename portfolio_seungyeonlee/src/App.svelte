@@ -67,5 +67,7 @@
 </main>
 
 <footer>
-  <img src="/images/linkedin_logo.png" class="logo" alt="LinkedIn Profile">
+  <a href="https://www.linkedin.com/in/seungyeon-lee-42baa9216" target="_blank" rel="noopener noreferrer">
+    <img src="/images/linkedin_logo.png" class="logo" alt="LinkedIn Profile">
+  </a>
 </footer>
