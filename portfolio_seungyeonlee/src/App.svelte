@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import { goto } from './router.js'; // 라우팅 기능을 위한 별도 파일
   function scrollToSection(id) {
     const section = document.getElementById(id);
@@ -6,6 +7,19 @@
       section.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+  onMount(() => {
+    const hash = window.location.hash.substring(1); // "#work" → "work"
+    if (hash) {
+      setTimeout(() => {
+        const section = document.getElementById(hash);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // 페이지 로드 후 부드럽게 이동
+    }
+  });
+
   function navigateTo(page) {
     goto(page);
   }

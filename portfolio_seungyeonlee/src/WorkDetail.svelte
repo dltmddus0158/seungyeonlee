@@ -1,27 +1,24 @@
 <script>
     import { goto } from './router.js';
   </script>
-  
-  <main class="card">
-    <h3>Work Detail</h3>
-    <p>This is a detailed page about my work.</p>
-    <button class="back-button" on:click={() => goto('work')}>Back</button>
-  </main>
-  
+
   <style>
-    .back-button {
-      margin-top: 20px;
-      padding: 10px 15px;
-      background-color: #646cff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-  
-    .back-button:hover {
-      background-color: #4a4eff;
-    }
+    @import url('./work.css');
   </style>
+  
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html" on:click|preventDefault={() => goto('index', 'about')}>ABOUT</a></li>
+      <li><a href="index.html" on:click|preventDefault={() => goto('index', 'work')}>WORK</a></li>
+      <li><a href="index.html" on:click|preventDefault={() => goto('index', 'writings')}>WRITINGS</a></li>
+      <li><a href="/resume.pdf" target="_blank">RESUME</a></li>
+    </ul>
+  </nav>
+
+  <main class="detail-container">
+    <section id="workDetail" class="card">
+      <h3>Work</h3>
+      <p>Work Title goes here.</p>
+    </section>
+  </main>
   

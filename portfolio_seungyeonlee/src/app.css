@@ -76,6 +76,7 @@ p {
   padding: 10px;
 }
 
+/* 버튼 스타일 */
 .image-button {
   background: none;
   border: none;
@@ -90,6 +91,6 @@ p {
   transition: transform 0.3s ease;
 }
 
-.image-button:hover img {
+.image-button img:hover {
   transform: scale(1.05);
 }

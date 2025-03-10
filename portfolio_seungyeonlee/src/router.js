@@ -1,4 +1,3 @@
-export function goto(page) {
-    window.location.href = `${page}.html`;
-  }
-  
+export function goto(page, sectionId = null) {
+  window.location.href = `${page}.html${sectionId ? `#${sectionId}` : ''}`;
+}
